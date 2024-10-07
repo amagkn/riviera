@@ -1,12 +1,7 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
 
 const HomePage: React.FC = () => {
-  return (
-    <div>
-      <Button>Hi there</Button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HomePage;
