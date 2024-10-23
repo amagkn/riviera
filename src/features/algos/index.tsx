@@ -1,1 +1,1 @@
-export { AlgosContent } from "./algos-content";
+export { AlgosContent } from "./algos-contents";
