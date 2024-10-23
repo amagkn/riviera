@@ -28,15 +28,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`bg-[#232529] min-h-[100vh] text-[#e2e3e7] ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="container mx-auto px-4 max-w-6xl">
-          <Providers>
-            <AppHeader />
-            <main>{children}</main>
-          </Providers>
-        </div>
+      <body>
+        <Providers>
+          <div
+            className={`bg-[#232529] min-h-[100vh] text-[#e2e3e7] ${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <div className="container mx-auto max-w-6xl">
+              <AppHeader />
+            </div>
+
+            <main className="h-[90vh]">{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

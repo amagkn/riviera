@@ -6,7 +6,7 @@ import { BellIcon } from "@/shared/assets/icons";
 
 export const AppHeader: React.FC = () => {
   return (
-    <div className="flex justify-between items-center py-6 shadow">
+    <div className="flex justify-between items-center h-[10vh]">
       <div>
         <Link className="font-bold" href={paths.home()}>
           REVIERA
