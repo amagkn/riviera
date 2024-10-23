@@ -1,10 +1,24 @@
 import React from "react";
-import { Editor } from "@/entities/editor";
+import { PageDescription } from "@/entities/page-description";
+import { AlgosContent } from "@/features/algos";
+import { Paragraph } from "@/shared/ui";
+
+const PAGE_TITLE = "Алгоритмы и Структуры Данных";
+const PAGE_CONTENT = (
+  <>
+    <Paragraph>Овладейте основами алгоритмов и структур данных — ключевыми навыками для любого программиста.</Paragraph>
+    <Paragraph>
+      На этой странице вы найдете пошаговые уроки, интерактивные задания и примеры кода, которые помогут вам разобраться
+      с фундаментальными концепциями и их применением на практике.
+    </Paragraph>
+  </>
+);
 
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Editor />
+      <PageDescription title={PAGE_TITLE} content={PAGE_CONTENT} />
+      <AlgosContent />
     </div>
   );
 };

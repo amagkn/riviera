@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import dynamic from "next/dynamic";
-import { Button } from "@/shared/components";
+import { Button } from "@nextui-org/react";
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 

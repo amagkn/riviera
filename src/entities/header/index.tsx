@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import Link from "next/link";
 import { paths } from "@/shared/paths";
-import { Button, Input } from "@/shared/components";
 import { BellIcon, SearchIcon } from "@/shared/assets/icons";
+import { Input } from "@nextui-org/react";
 
 export const Header: React.FC = () => {
   return (
