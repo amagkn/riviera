@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import dynamic from "next/dynamic";
-import { Button } from "@/shared/components";
+import { Button } from "@nextui-org/react";
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
-interface EditorProps {}
+interface NoteEditorProps {}
 
-export const Editor: React.FC<EditorProps> = () => {
+export const NoteEditor: React.FC<NoteEditorProps> = () => {
   const [value, setValue] = useState("");
 
   return (

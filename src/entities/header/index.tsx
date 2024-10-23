@@ -1,33 +1,27 @@
 import * as React from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { paths } from "@/shared/paths";
-import { Button, Input } from "@/shared/components";
-import { BellIcon, SearchIcon } from "@/shared/assets/icons";
+import { BellIcon } from "@/shared/assets/icons";
 
-export const Header: React.FC = () => {
+export const AppHeader: React.FC = () => {
   return (
-    <Navbar className="shadow mb-6">
-      <NavbarBrand>
+    <div className="px-5 flex justify-between items-center h-[10vh]">
+      <div>
         <Link className="font-bold" href={paths.home()}>
           REVIERA
         </Link>
-      </NavbarBrand>
-      <NavbarContent justify="center">
-        <NavbarItem>
-          <Input startContent={<SearchIcon />} />
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
+      </div>
+      <div className="flex justify-between items-center">
+        <div className="mr-4">
           <Link href={paths.notifications()}>
             <BellIcon />
           </Link>
-        </NavbarItem>
-        <NavbarItem>
+        </div>
+        <div>
           <Button>Войти</Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+        </div>
+      </div>
+    </div>
   );
 };

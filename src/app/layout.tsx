@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "@/app/providers";
-import { Header } from "@/entities/header";
+import { AppHeader } from "@/entities/header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Riviera",
+  title: "Reviera",
   description: "You're author",
 };
 
@@ -28,9 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`bg-[#232529] text-[#e2e3e7] ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <Header />
+          <AppHeader />
+
           {children}
         </Providers>
       </body>
